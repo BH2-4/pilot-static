@@ -1,0 +1,14 @@
+# Blueprint: https://render.com/docs/blueprint-spec
+# 静态站无需构建命令，直接发布仓库根目录
+services:
+  - type: web
+    runtime: static
+    name: pilot-static
+    staticPublishPath: .
+    headers:
+      - path: /*
+        name: X-Frame-Options
+        value: DENY
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff

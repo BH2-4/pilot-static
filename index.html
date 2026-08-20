@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pilot Static - 网站管理体系试点</title>
+  <style>
+    :root { color-scheme: light dark; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: #e2e8f0;
+    }
+    .card {
+      text-align: center;
+      padding: 3rem 2.5rem;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      max-width: 560px;
+    }
+    h1 { font-size: 1.75rem; margin-bottom: 0.75rem; letter-spacing: 0.02em; }
+    p { line-height: 1.8; color: #94a3b8; font-size: 0.95rem; }
+    .badge {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      border: 1px solid rgba(74, 222, 128, 0.35);
+      color: #4ade80;
+      background: rgba(74, 222, 128, 0.08);
+    }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.85em;
+      color: #7dd3fc;
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1>🚀 P1 试点站部署成功</h1>
+    <p>
+      本页面由 <strong>GitHub 仓库 → Render 自动构建 → 全球 CDN</strong> 链路交付。<br>
+      后续此仓库每次 <code>git push</code>，Render 将自动重新部署。
+    </p>
+    <span class="badge" id="tls-badge">HTTPS 已启用</span>
+  </main>
+  <script>
+    // 验收辅助：HTTPS 绿锁可从地址框直观确认，这里再做一次协议断言
+    if (location.protocol !== "https:") {
+      document.getElementById("tls-badge").textContent = "⚠️ 非 HTTPS 访问";
+      document.getElementById("tls-badge").style.borderColor = "rgba(248,113,113,.4)";
+      document.getElementById("tls-badge").style.color = "#f87171";
+    }
+  </script>
+</body>
+</html>
