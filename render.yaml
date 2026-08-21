@@ -4,7 +4,7 @@ services:
   - type: web
     runtime: static
     name: pilot-static
-    staticPublishPath: .
+    staticPublishPath: public
     headers:
       - path: /*
         name: X-Frame-Options

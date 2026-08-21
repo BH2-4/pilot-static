@@ -8,7 +8,7 @@
 
 - 类型：Render Static Site（免费档）
 - 构建命令：无
-- 发布目录：仓库根目录（`.`）
+- 发布目录：`public/`（Render 标准约定）
 - 声明式配置见 [`render.yaml`](./render.yaml)（Blueprint）
 
 ## 验收标准（P1）
