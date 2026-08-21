@@ -1,8 +1,11 @@
 # pilot-static
 
-网站管理体系 P1 试点站：最简纯静态页，用于验证部署链路。
+网站管理体系 P1+P2 试点站：最简纯静态页，用于验证部署链路。
 
-**链路**：本仓库 `git push` → Render 自动构建 → 全球 CDN → `xxx.onrender.com`（HTTPS）
+**链路**：本仓库 `git push` → Render 自动构建 → 全球 CDN → `pilot.randomplayx.com`（HTTPS，灰云 CNAME）
+
+- 自定义域名：`pilot.randomplayx.com`（Cloudflare 灰云 CNAME → `pilot-static.onrender.com`）
+- 默认域名：`pilot-static.onrender.com`
 
 ## 部署配置
 
@@ -11,12 +14,13 @@
 - 发布目录：`public/`（Render 标准约定）
 - 声明式配置见 [`render.yaml`](./render.yaml)（Blueprint）
 
-## 验收标准（P1）
+## 验收记录（P1 + P2 均通过，2026-08-21）
 
-- [x] `pilot-static.onrender.com` 可正常打开（2026-08-21 验收通过）
-- [x] HTTPS 绿锁（证书自动签发，Google Trust Services）
+- [x] `pilot-static.onrender.com` 可正常打开
+- [x] HTTPS 绿锁（Google Trust Services 自动签发）
+- [x] `pilot.randomplayx.com` 全球解析生效（灰云 CNAME）
+- [x] 自定义域名证书自动签发（CN=pilot.randomplayx.com）
 
 ## 后续
 
-- P2：Cloudflare 添加 CNAME（灰云）→ Render 绑定自定义二级域名
-- P3：其余静态站 / 3D 站复制本流程（每站一仓库）
+- P3：其余静态站 / 3D 站复制本流程（每站一仓库 + 一条灰云 CNAME）
