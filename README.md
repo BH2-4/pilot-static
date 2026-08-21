@@ -13,8 +13,8 @@
 
 ## 验收标准（P1）
 
-- [ ] `xxx.onrender.com` 可正常打开
-- [ ] HTTPS 绿锁（证书由 Render 自动签发）
+- [x] `pilot-static.onrender.com` 可正常打开（2026-08-21 验收通过）
+- [x] HTTPS 绿锁（证书自动签发，Google Trust Services）
 
 ## 后续
 
