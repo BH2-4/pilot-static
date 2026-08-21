@@ -1,14 +1,14 @@
 {
   "schemaVersion": "mimosa-hook-status/v1",
-  "recordedAt": "2026-08-21T03:51:37.527Z",
+  "recordedAt": "2026-08-21T04:09:14.498Z",
   "sessionId": "sess_50a431ec-b236-4f49-809d-121208dab50e",
   "event": "PostToolUse",
   "toolName": "Edit",
-  "file": "/Users/arco/Documents/API库.txt",
+  "file": "public/index.html",
   "outcome": "clear",
   "coverage": "complete",
   "findingCount": 0,
-  "durationMs": 2,
+  "durationMs": 3,
   "hostState": "hook_complete",
   "reportHint": ".mimosa/reports/"
 }
